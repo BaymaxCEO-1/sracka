@@ -70,6 +70,21 @@
             margin-bottom: 10px;
         }
 
+        .product a button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product a button:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
         footer {
             background-color: rgba(0, 123, 255, 0.5);
             color: white;
@@ -93,13 +108,6 @@
             background-color: rgba(0, 123, 255, 1);
         }
     </style>
-    <script>
-        // 🔁 Tady změníš URL pro všechna tlačítka
-        const redirectUrl = "https://tvoje-stranka.cz/objednavka";
-        function goToLink() {
-            window.location.href = redirectUrl;
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -110,89 +118,99 @@
         </nav>
     </header>
 
-    <!-- Košík vpravo nahoře -->
-    <button class="cart-button" onclick="goToLink()">Košík</button>
+    <!-- Tlačítko košíku -->
+    <button class="cart-button">Košík</button>
 
+    <!-- Produkty -->
     <div class="product-list">
-        <!-- Produkt 1 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 1">
+            <img src="https://example.com/obrazek1.jpg" alt="Produkt 1">
             <h3>Produkt 1</h3>
             <p>Popis produktu 1</p>
             <div class="price">499 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz1" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 2 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 2">
+            <img src="https://example.com/obrazek2.jpg" alt="Produkt 2">
             <h3>Produkt 2</h3>
             <p>Popis produktu 2</p>
             <div class="price">899 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz2" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 3 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 3">
+            <img src="https://example.com/obrazek3.jpg" alt="Produkt 3">
             <h3>Produkt 3</h3>
             <p>Popis produktu 3</p>
             <div class="price">999 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz3" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 4 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 4">
+            <img src="https://example.com/obrazek4.jpg" alt="Produkt 4">
             <h3>Produkt 4</h3>
             <p>Popis produktu 4</p>
             <div class="price">499 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz4" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 5 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 5">
+            <img src="https://example.com/obrazek5.jpg" alt="Produkt 5">
             <h3>Produkt 5</h3>
             <p>Popis produktu 5</p>
             <div class="price">899 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz5" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 6 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 6">
+            <img src="https://example.com/obrazek6.jpg" alt="Produkt 6">
             <h3>Produkt 6</h3>
             <p>Popis produktu 6</p>
             <div class="price">999 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz6" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 7 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 7">
+            <img src="https://example.com/obrazek7.jpg" alt="Produkt 7">
             <h3>Produkt 7</h3>
             <p>Popis produktu 7</p>
             <div class="price">499 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz7" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 8 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 8">
+            <img src="https://example.com/obrazek8.jpg" alt="Produkt 8">
             <h3>Produkt 8</h3>
             <p>Popis produktu 8</p>
             <div class="price">899 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz8" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
 
-        <!-- Produkt 9 -->
         <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Produkt 9">
+            <img src="https://example.com/obrazek9.jpg" alt="Produkt 9">
             <h3>Produkt 9</h3>
             <p>Popis produktu 9</p>
             <div class="price">999 Kč</div>
-            <button onclick="goToLink()">Přidat do košíku</button>
+            <a href="https://example.com/odkaz9" target="_blank">
+                <button>Přejít na produkt</button>
+            </a>
         </div>
     </div>
 
