@@ -1,35 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baymaxův E-shop</title>
     <style>
-        /* Tělo */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Uspořádání vertikálně */
+            flex-direction: column;
             background-image: url('https://wallpapers.com/images/hd/random-background-1920-x-1080-9gb6lqc5b4gkk6yw.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            height: 100vh; /* Celá výška obrazovky */
-            justify-content: space-between; /* Různé části na stránce: top, content, bottom */
+            height: 100vh;
+            justify-content: space-between;
         }
 
-        /* Nadpis */
         header {
-            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá barva */
+            background-color: rgba(0, 123, 255, 0.5);
             color: white;
-            text-align: center; /* Horizontální střed */
+            text-align: center;
             padding: 30px 0;
         }
 
-        /* Tlačítka v navigaci */
         nav {
             text-align: center;
             margin-top: 10px;
@@ -39,7 +36,7 @@
             margin: 5px;
             padding: 10px 20px;
             font-size: 1em;
-            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá */
+            background-color: rgba(0, 123, 255, 0.5);
             color: white;
             border: none;
             border-radius: 5px;
@@ -47,17 +44,16 @@
         }
 
         nav button:hover {
-            background-color: rgba(0, 123, 255, 0.8); /* Tmavší modrá při hoveru */
+            background-color: rgba(0, 123, 255, 0.8);
         }
 
-        /* Produkty uprostřed stránky */
         .product-list {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 sloupce */
-            grid-gap: 20px; /* Mezera mezi produkty */
-            justify-items: center; /* Středování produktů */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
             padding: 30px;
-            flex-grow: 1; /* Umožní produktům růst a vyplnit prostor */
+            flex-grow: 1;
         }
 
         .product {
@@ -74,15 +70,13 @@
             margin-bottom: 10px;
         }
 
-        /* Patička */
         footer {
-            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá barva */
+            background-color: rgba(0, 123, 255, 0.5);
             color: white;
             text-align: center;
             padding: 10px;
         }
 
-        /* Tlačítko košíku v pravém horním rohu */
         .cart-button {
             position: absolute;
             top: 10px;
@@ -99,6 +93,13 @@
             background-color: rgba(0, 123, 255, 1);
         }
     </style>
+    <script>
+        // 🔁 Tady změníš URL pro všechna tlačítka
+        const redirectUrl = "https://tvoje-stranka.cz/objednavka";
+        function goToLink() {
+            window.location.href = redirectUrl;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -109,73 +110,89 @@
         </nav>
     </header>
 
-    <!-- Tlačítko košíku -->
-    <button class="cart-button">Košík</button>
+    <!-- Košík vpravo nahoře -->
+    <button class="cart-button" onclick="goToLink()">Košík</button>
 
-    <!-- Produkty (9 položek) uprostřed -->
     <div class="product-list">
+        <!-- Produkt 1 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 1">
             <h3>Produkt 1</h3>
             <p>Popis produktu 1</p>
             <div class="price">499 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 2 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 2">
             <h3>Produkt 2</h3>
             <p>Popis produktu 2</p>
             <div class="price">899 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 3 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 3">
             <h3>Produkt 3</h3>
             <p>Popis produktu 3</p>
             <div class="price">999 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 4 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 4">
             <h3>Produkt 4</h3>
             <p>Popis produktu 4</p>
             <div class="price">499 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 5 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 5">
             <h3>Produkt 5</h3>
             <p>Popis produktu 5</p>
             <div class="price">899 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 6 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 6">
             <h3>Produkt 6</h3>
             <p>Popis produktu 6</p>
             <div class="price">999 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 7 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 7">
             <h3>Produkt 7</h3>
             <p>Popis produktu 7</p>
             <div class="price">499 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 8 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 8">
             <h3>Produkt 8</h3>
             <p>Popis produktu 8</p>
             <div class="price">899 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
+
+        <!-- Produkt 9 -->
         <div class="product">
             <img src="https://via.placeholder.com/200" alt="Produkt 9">
             <h3>Produkt 9</h3>
             <p>Popis produktu 9</p>
             <div class="price">999 Kč</div>
-            <button>Přidat do košíku</button>
+            <button onclick="goToLink()">Přidat do košíku</button>
         </div>
     </div>
 
