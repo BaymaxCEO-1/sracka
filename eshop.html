@@ -107,6 +107,34 @@
         .cart-button:hover {
             background-color: rgba(0, 123, 255, 1);
         }
+        @media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* tablet – 2 sloupce */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: 1fr; /* mobil – 1 sloupec */
+        padding: 20px;
+    }
+
+    nav button, .cart-button, .product a button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .cart-button {
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+}
     </style>
 </head>
 <body>
