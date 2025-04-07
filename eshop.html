@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednoduchý e-shop</title>
+    <style>
+        /* Tělo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Uspořádání vertikálně */
+            background-image: url('https://wallpapers.com/images/hd/random-background-1920-x-1080-9gb6lqc5b4gkk6yw.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh; /* Celá výška obrazovky */
+            justify-content: space-between; /* Různé části na stránce: top, content, bottom */
+        }
+
+        /* Nadpis */
+        header {
+            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá barva */
+            color: white;
+            text-align: center; /* Horizontální střed */
+            padding: 30px 0;
+        }
+
+        /* Tlačítka v navigaci */
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: rgba(0, 123, 255, 0.8); /* Tmavší modrá při hoveru */
+        }
+
+        /* Produkty uprostřed stránky */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 sloupce */
+            grid-gap: 20px; /* Mezera mezi produkty */
+            justify-items: center; /* Středování produktů */
+            padding: 30px;
+            flex-grow: 1; /* Umožní produktům růst a vyplnit prostor */
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Patička */
+        footer {
+            background-color: rgba(0, 123, 255, 0.5); /* Průhledná modrá barva */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Tlačítko košíku v pravém horním rohu */
+        .cart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-button:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Baymaxův e-shop</h1>
+        <nav>
+            <button onclick="location.href='sponzori.html'">Sponzoři</button>
+            <button onclick="location.href='zamestnanci.html'">Zaměstnanci</button>
+        </nav>
+    </header>
+
+    <!-- Tlačítko košíku -->
+    <button class="cart-button">Košík</button>
+
+    <!-- Produkty (9 položek) uprostřed -->
+    <div class="product-list">
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 1">
+            <h3>Produkt 1</h3>
+            <p>Popis produktu 1</p>
+            <div class="price">499 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 2">
+            <h3>Produkt 2</h3>
+            <p>Popis produktu 2</p>
+            <div class="price">899 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 3">
+            <h3>Produkt 3</h3>
+            <p>Popis produktu 3</p>
+            <div class="price">999 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 4">
+            <h3>Produkt 4</h3>
+            <p>Popis produktu 4</p>
+            <div class="price">499 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 5">
+            <h3>Produkt 5</h3>
+            <p>Popis produktu 5</p>
+            <div class="price">899 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 6">
+            <h3>Produkt 6</h3>
+            <p>Popis produktu 6</p>
+            <div class="price">999 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 7">
+            <h3>Produkt 7</h3>
+            <p>Popis produktu 7</p>
+            <div class="price">499 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 8">
+            <h3>Produkt 8</h3>
+            <p>Popis produktu 8</p>
+            <div class="price">899 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Produkt 9">
+            <h3>Produkt 9</h3>
+            <p>Popis produktu 9</p>
+            <div class="price">999 Kč</div>
+            <button>Přidat do košíku</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Baymaxův e-shop | Všechna práva vyhrazena</p>
+    </footer>
+</body>
+</html>
