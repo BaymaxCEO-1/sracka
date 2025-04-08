@@ -1,249 +1,59 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Největší Vinted E-shop v ČR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            background-image: url('https://wallpapers.com/images/hd/random-background-1920-x-1080-9gb6lqc5b4gkk6yw.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            height: 100vh;
-            justify-content: space-between;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEXY VIBES</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-        header {
-            background-color: rgba(0, 123, 255, 0.5);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        nav button {
-            margin: 5px;
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: rgba(0, 123, 255, 0.5);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        nav button:hover {
-            background-color: rgba(0, 123, 255, 0.8);
-        }
-
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-            justify-items: center;
-            padding: 30px;
-            flex-grow: 1;
-        }
-
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 200px;
-            text-align: center;
-            padding: 15px;
-        }
-
-        .product img {
-            max-width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .product a button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            font-size: 1em;
-            background-color: rgba(0, 123, 255, 0.7);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .product a button:hover {
-            background-color: rgba(0, 123, 255, 1);
-        }
-
-        footer {
-            background-color: rgba(0, 123, 255, 0.5);
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .cart-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            background-color: rgba(0, 123, 255, 0.7);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .cart-button:hover {
-            background-color: rgba(0, 123, 255, 1);
-        }
-        @media (max-width: 1024px) {
-    .product-list {
-        grid-template-columns: repeat(2, 1fr); /* tablet – 2 sloupce */
-    }
-}
-
-@media (max-width: 600px) {
-    .product-list {
-        grid-template-columns: 1fr; /* mobil – 1 sloupec */
-        padding: 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav button, .cart-button, .product a button {
-        font-size: 0.9em;
-        padding: 8px 12px;
+    body {
+      font-family: 'Playfair Display', serif;
+      background-image: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .product {
-        width: 100%;
-        max-width: 300px;
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    .cart-button {
-        position: static;
-        margin: 10px auto;
-        display: block;
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
-}
-    </style>
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Největší Vinted E-shop v ČR</h1>
-        <nav>
-            <button onclick="location.href='sponzori.html'">Sponzoři</button>
-            <button onclick="location.href='zamestnanci.html'">Zaměstnanci</button>
-        </nav>
-    </header>
-
-    <!-- Tlačítko košíku -->
-    <button class="cart-button">Košík</button>
-
-    <!-- Produkty -->
-    <div class="product-list">
-        <div class="product">
-            <img src="https://images1.vinted.net/t/03_018df_GcgpgCExFTvm3RdCreqkeL5F/f800/1743851506.jpeg?s=116046f129ac348d3679c53d9f5865d63d213f24" alt="Produkt 1">
-            <h3>Týdenní diář</h3>
-            <p>Týdenní diář, s ražbou chmýří, s gumičkou, se záložkou a postranním úchytem na tužku/ propisku, uvnitř na deskách kapsa/obálka, rozměry 17x13 cm</p>
-            <div class="price">65,25 Kč</div>
-            <a href="https://www.vinted.cz/items/6090895751-tydenni-diar" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://images1.vinted.net/t/01_025ef_zBjbfSnMCG3zVDvYkY6ufcJM/f800/1742720458.jpeg?s=c5e6ebbb415584df0852d318191d50f89f522715" alt="Produkt 2">
-            <h3>Sada metalických akrylových barev</h3>
-            <p>Úplně nové, nerozbalené, 4x12ml metalické barvy v sadě (zlatá, stříbrná, bronzová a měděná)</p>
-            <div class="price">81 Kč</div>
-            <a href="https://www.vinted.cz/items/6016398611-sada-metalickych-akrylovych-barev="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://images1.vinted.net/t/04_00232_6hK1Hw4sfPtQHixadph4fojB/f800/1743233926.jpeg?s=a16296ac019104a7d3e496b65bc800e8a26f332e" alt="Produkt 3">
-            <h3>Madagascar centella SPF krém</h3>
-            <p>Nový, nepoužitý, SPF krém</p>
-            <div class="price">301,50 Kč</div>
-            <a href="https://www.vinted.cz/items/6050450283-madagascar-centella-spf-krem" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek4.jpg" alt="Produkt 4">
-            <h3>Produkt 4</h3>
-            <p>Popis produktu 4</p>
-            <div class="price">499 Kč</div>
-            <a href="https://example.com/odkaz4" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek5.jpg" alt="Produkt 5">
-            <h3>Produkt 5</h3>
-            <p>Popis produktu 5</p>
-            <div class="price">899 Kč</div>
-            <a href="https://example.com/odkaz5" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek6.jpg" alt="Produkt 6">
-            <h3>Produkt 6</h3>
-            <p>Popis produktu 6</p>
-            <div class="price">999 Kč</div>
-            <a href="https://example.com/odkaz6" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek7.jpg" alt="Produkt 7">
-            <h3>Produkt 7</h3>
-            <p>Popis produktu 7</p>
-            <div class="price">499 Kč</div>
-            <a href="https://example.com/odkaz7" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek8.jpg" alt="Produkt 8">
-            <h3>Produkt 8</h3>
-            <p>Popis produktu 8</p>
-            <div class="price">899 Kč</div>
-            <a href="https://example.com/odkaz8" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="https://example.com/obrazek9.jpg" alt="Produkt 9">
-            <h3>Produkt 9</h3>
-            <p>Popis produktu 9</p>
-            <div class="price">999 Kč</div>
-            <a href="https://example.com/odkaz9" target="_blank">
-                <button>Přejít na produkt</button>
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Baymaxův e-shop | Všechna práva vyhrazena</p>
-    </footer>
+  <div class="overlay">
+    <h1>SEXY VIBES</h1>
+    <p>Elegance. Confidence. Allure. This is your moment.</p>
+  </div>
 </body>
 </html>
